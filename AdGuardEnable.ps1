@@ -41,19 +41,8 @@ Clear-Host
 
 Write-Host "----------------------------------------------------------------`n                     Configuring AdGuard             `n----------------------------------------------------------------" -ForegroundColor Yellow
 
-$checkcf = Read-Host "Would you like to use Cloudflare as your secondary DNS? (this means if the AdGuard Server goes down you won't loose internet access) (Y/N) [Y]"
-
-if ($null -eq $checkcf -or $checkcf -eq "") {
-    $checkcf = "y"
-}
-
 try {
-    if ($checkcf -eq "y") {
-        Get-NetAdapter | Set-DnsClientServerAddress -ServerAddresses $server, 1.1.1.1
-    }
-    elseif ($checkcf -eq "n") {
-        Get-NetAdapter | Set-DnsClientServerAddress -ServerAddresses $server
-    }
+    Get-NetAdapter | Set-DnsClientServerAddress -ServerAddresses $server
     Write-Host "Complete!" -ForegroundColor Green -BackgroundColor Black
 }
 catch {
