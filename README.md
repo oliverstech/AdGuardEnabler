@@ -14,7 +14,5 @@ Currently, we only have Windows support.
 2. Find the file which you just downloaded. Now, right-click it and select 'Run With PowerShell', making sure to click 'Yes' to allow it to make changes. Follow through the steps. Each step will tell you what they do on screen!
 3. Enjoy ad-free browsing!
 
-- The first step checks whether the server is running.
-- The second step sets up Cloudflare alongside AdGuard (if the AdGuard server goes down, your internet will continue working but with ads).
 
 *Your internet requests may be saved on the AdGuard cloud server. Please keep this in mind.*
